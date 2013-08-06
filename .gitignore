@@ -88,7 +88,7 @@ GTAGS
 Packages/
 build-mahdi-exp.sh
 build-mahdi-stable.sh
-build-mahdi-stable-4.3.sh
+build-mahdi-4.3.sh
 build-stock.sh
 kernel/usr/
 mkbootfs
