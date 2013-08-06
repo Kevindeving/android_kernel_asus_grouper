@@ -34,6 +34,8 @@
 
 #include "xfrm_hash.h"
 
+#define DST_XFRM_TUNNEL		0x0100
+
 DEFINE_MUTEX(xfrm_cfg_mutex);
 EXPORT_SYMBOL(xfrm_cfg_mutex);
 
@@ -1919,6 +1921,9 @@ no_transform:
 	}
 ok:
 	xfrm_pols_put(pols, drop_pols);
+	if (dst && dst->xfrm &&
+	    dst->xfrm->props.mode == XFRM_MODE_TUNNEL)
+		dst->flags |= DST_XFRM_TUNNEL;
 	return dst;
 
 nopol:
