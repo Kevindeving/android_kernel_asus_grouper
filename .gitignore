@@ -89,6 +89,7 @@ Packages/
 build-mahdi-exp.sh
 build-mahdi-stable.sh
 build-stock.sh
+build-mahdi-4.4.sh
 kernel/usr/
 mkbootfs
 mkbootimg
